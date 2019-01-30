@@ -244,6 +244,7 @@ typedef struct esc_cfg
    void (*esc_hw_interrupt_enable) (uint32_t mask);
    void (*esc_hw_interrupt_disable) (uint32_t mask);
    void (*esc_hw_eep_handler) (void);
+   uint16_t (*esc_check_dc_handler) (void);
 } esc_cfg_t;
 
 typedef struct
@@ -356,6 +357,7 @@ typedef struct CC_PACKED
    void (*esc_hw_interrupt_enable) (uint32_t mask);
    void (*esc_hw_interrupt_disable) (uint32_t mask);
    void (*esc_hw_eep_handler) (void);
+   uint16_t (*esc_check_dc_handler) (void);
    uint8_t MBXrun;
    size_t activembxsize;
    sm_cfg_t * activemb0;
